@@ -1057,3 +1057,151 @@ footer p {
         font-size: 28px;
     }
 }
+
+/* ===== SECTION À PROPOS - STYLE DU TEXTE ===== */
+
+/* Conteneur principal */
+.about-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Bloc de texte */
+.about-text {
+    position: relative;
+}
+
+/* Style des paragraphes */
+.about-text p {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 25px;
+    color: rgba(255, 255, 255, 0.9);
+    text-align: justify;
+    position: relative;
+    padding-left: 25px;
+    transition: all 0.3s ease;
+}
+
+/* Effet de bordure sur chaque paragraphe */
+.about-text p {
+    border-left: 3px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.about-text p:hover {
+    border-left-color: #3cf;
+    padding-left: 30px;
+    color: #fff;
+}
+
+/* Premier paragraphe avec une mise en valeur */
+.about-text p:first-of-type {
+    font-size: 18px;
+    font-weight: 500;
+    background: linear-gradient(135deg, #fff, #3cf);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border-left: 3px solid #3cf;
+    padding-left: 30px;
+    margin-bottom: 30px;
+}
+
+/* Dernier paragraphe avec un style particulier */
+.about-text p:last-of-type {
+    font-style: italic;
+    background: linear-gradient(135deg, rgba(51, 204, 255, 0.1), rgba(255, 0, 102, 0.05));
+    padding: 20px 25px;
+    border-radius: 15px;
+    border-left: 4px solid #f06;
+    margin-top: 30px;
+    text-align: center;
+    font-size: 17px;
+}
+
+/* Effet de surbrillance pour certains mots clés */
+.about-text p strong {
+    background: linear-gradient(45deg, #f06, #3cf);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 600;
+}
+
+/* Ajout d'une décoration au texte */
+.about-text::before {
+    content: '"';
+    position: absolute;
+    top: -20px;
+    left: -15px;
+    font-size: 80px;
+    font-family: serif;
+    color: rgba(51, 204, 255, 0.1);
+    pointer-events: none;
+}
+
+.about-text::after {
+    content: '"';
+    position: absolute;
+    bottom: -60px;
+    right: -15px;
+    font-size: 80px;
+    font-family: serif;
+    color: rgba(255, 0, 102, 0.1);
+    pointer-events: none;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .about-text p {
+        font-size: 14px;
+        line-height: 1.7;
+        padding-left: 15px;
+    }
+    
+    .about-text p:first-of-type {
+        font-size: 16px;
+        padding-left: 20px;
+    }
+    
+    .about-text p:last-of-type {
+        font-size: 15px;
+        padding: 15px 20px;
+    }
+    
+    .about-text::before,
+    .about-text::after {
+        font-size: 50px;
+    }
+    
+    .about-text::before {
+        top: -10px;
+        left: -5px;
+    }
+    
+    .about-text::after {
+        bottom: -40px;
+        right: -5px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .about-text p {
+        font-size: 13px;
+        padding-left: 12px;
+    }
+    
+    .about-text p:first-of-type {
+        font-size: 15px;
+        padding-left: 15px;
+    }
+    
+    .about-text p:last-of-type {
+        font-size: 14px;
+        padding: 12px 15px;
+    }
+    
+    .about-text::before,
+    .about-text::after {
+        display: none;
+    }
+}
